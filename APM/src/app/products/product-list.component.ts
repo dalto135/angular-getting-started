@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { filter } from 'rxjs';
 import { IProduct } from './product';
 
 @Component({
@@ -90,5 +89,9 @@ export class ProductListComponent implements OnInit {
 
     ngOnInit(): void {
         this.listFilter = 'cart';
+    }
+
+    onRatingClicked(message: string): void {
+        this.pageTitle = 'Product List: ' + message;
     }
 }
